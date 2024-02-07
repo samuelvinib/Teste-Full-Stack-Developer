@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triângulo Máximo</title>
+    <style>
+        /* Estilos CSS podem ser adicionados aqui */
+    </style>
+</head>
+<body>
+    <h1>Triângulo Máximo</h1>
+    <form action="/calculate" method="post">
+        <label for="triangle">Triângulo de Números:</label><br>
+        <textarea id="triangle" name="triangle" rows="4" cols="50" placeholder="Insira o triângulo de números..."></textarea><br>
+        <button type="submit">Calcular</button>
+    </form>
+
+    <!-- Aqui serão exibidos os resultados -->
+    {% if result %}
+        <h2>Resultado:</h2>
+        <p>Total Máximo: {{ result }}</p>
+        <!-- Aqui você pode exibir o triângulo de forma tracejada com o caminho percorrido -->
+    {% endif %}
+
+    <!-- Se houver algum erro, exibir aqui -->
+    {% if error %}
+        <p>{{ error }}</p>
+    {% endif %}
+</body>
+</html>
