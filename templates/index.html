@@ -63,5 +63,9 @@
     </div>
     <button type="submit">Calcular</button>
 </form>
+
+{% if result > 0 %}
+<p> O total máximo de cima para baixo é : {{ result }}</p>
+{% endif %}
 </body>
 </html>
