@@ -16,4 +16,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 5000
 
 # Comando para iniciar a aplicação Flask quando o contêiner for iniciado
-CMD ["python", "app.py"]
+CMD ["python3", "-m" , "flask", "run", "--host=0.0.0.0"]

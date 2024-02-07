@@ -27,3 +27,45 @@ Escolha a linguagem de programação desejada e deixo nos saber a sua estratégi
 ## Parâmetros de entrada e de saída
 
 Seu código receberá uma lista multidimensional como parametro. O triangulo do exemplo receberá, então: [[6],[3,5],[9,7,1],[4,6,8,4]].
+
+<br>
+
+# Instalação do projeto
+
+> - Este projeto foi construido em imagens Docker, é necessário ter o Docker instalado em sua máquina previamente.
+
+<br>
+
+# Como rodar o projeto: 
+
+## Passo 1
+
+Após clonar o projeto em sua máquina navegue até o diretório raiz do projeto:
+
+```bash
+  cd Teste-Full-Stack-Developer
+```
+
+## Passo 2
+
+Execute o seguinte comando para buildar a imagem docker em flask:
+
+```bash
+  docker build -t triangle_app . 
+```
+
+## Passo 3
+
+Execute o seguinte comando para rodar seu projeto na porta 5000:
+
+```bash
+   docker run -p 5000:5000 triangle_app 
+```
+
+## Pronto!!
+
+Agora basta acessar o endereço local com a porta 5000:
+
+```bash
+   http://localhost:5000/
+```
