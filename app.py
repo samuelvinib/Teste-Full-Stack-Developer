@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index.html', result=0)
 
 
 @app.route('/calculate', methods=['POST'])
@@ -26,7 +26,7 @@ def calculate():
     for line in max_total:
         triangle_sum += sum(int(digit) for digit in str(line))
 
-    return {'max_total': triangle_sum}
+    return render_template('index.html', result=triangle_sum)
 
 
 if __name__ == '__main__':
