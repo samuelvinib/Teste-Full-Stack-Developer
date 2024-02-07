@@ -5,27 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Triângulo Máximo</title>
     <style>
-        /* Estilos CSS podem ser adicionados aqui */
+        h1, p {
+            text-align: center;
+        }
+
+        .triangulo {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button {
+            margin: 50px auto;
+            display: block;
+            width: 25%;
+            padding: 10px 0;
+            background: #3A7734;
+            color: #fff;
+        }
+
+        input[type="number"] {
+            height: 25px;
+            border-radius: 5px;
+            outline: none;
+            margin: 10px 0;
+        }
+
+        input[type="number"]::-webkit-inner-spin-button {
+            appearance: none;
+        }
     </style>
 </head>
 <body>
-    <h1>Triângulo Máximo</h1>
-    <form action="/calculate" method="post">
-        <label for="triangle">Triângulo de Números:</label><br>
-        <textarea id="triangle" name="triangle" rows="4" cols="50" placeholder="Insira o triângulo de números..."></textarea><br>
-        <button type="submit">Calcular</button>
-    </form>
-
-    <!-- Aqui serão exibidos os resultados -->
-    {% if result %}
-        <h2>Resultado:</h2>
-        <p>Total Máximo: {{ result }}</p>
-        <!-- Aqui você pode exibir o triângulo de forma tracejada com o caminho percorrido -->
-    {% endif %}
-
-    <!-- Se houver algum erro, exibir aqui -->
-    {% if error %}
-        <p>{{ error }}</p>
-    {% endif %}
+<h1>Triângulo Máximo</h1>
+<form action="/calculate" method="post">
+    <p>Insira os Números do triângulo:</p><br>
+    <div class="triangulo">
+        <label>
+            <input name="top" type="number" min="0" max="9">
+        </label>
+        <label>
+            <input name="third_1" type="number" min="0" max="9">
+            <input name="third_2" type="number" min="0" max="9">
+        </label>
+        <label>
+            <input name="second_1" type="number" min="0" max="9">
+            <input name="second_2" type="number" min="0" max="9">
+            <input name="second_3" type="number" min="0" max="9">
+        </label>
+        <label>
+            <input name="base_1" type="number" min="0" max="9">
+            <input name="base_2" type="number" min="0" max="9">
+            <input name="base_3" type="number" min="0" max="9">
+            <input name="base_4" type="number" min="0" max="9">
+        </label>
+    </div>
+    <button type="submit">Calcular</button>
+</form>
 </body>
 </html>
